@@ -1,0 +1,13 @@
+# netlify.toml
+[build]
+  command = "npm ci && npm run build"
+  publish = ".next"
+
+# Environment variables needed for Prisma
+[build.environment]
+  NODE_VERSION = "18"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+
